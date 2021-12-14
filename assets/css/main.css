@@ -3257,7 +3257,7 @@ input, select, textarea {
 		}
 
 		.wrapper.style3 {
-			background: linear-gradient(180deg, #900000, #db9300, #9b0088);
+			background: linear-gradient(180deg, #900000, #d27100, #900000);
 	background-size: 600% 600%;
 
 	-webkit-animation: AnimationName 30s ease infinite;
