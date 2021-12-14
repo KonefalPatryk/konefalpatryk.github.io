@@ -98,6 +98,7 @@ input, select, textarea {
 	}
 
 	body {
+
 		background: #312450;
 	}
 
@@ -3255,8 +3256,30 @@ input, select, textarea {
 			background-color: #3e4094;
 		}
 
-		.wrapper.style3 {
-			background-color: #b74e91;
+		.wrapper.style3 { */ RAINBOW */
+			background: linear-gradient(0deg, #700099, #11009d, #890053);
+background-size: 600% 600%;
+
+-webkit-animation: AnimationName 7s ease infinite;
+-moz-animation: AnimationName 7s ease infinite;
+animation: AnimationName 7s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+0%{background-position:51% 0%}
+50%{background-position:50% 100%}
+100%{background-position:51% 0%}
+}
+@-moz-keyframes AnimationName {
+0%{background-position:51% 0%}
+50%{background-position:50% 100%}
+100%{background-position:51% 0%}
+}
+@keyframes AnimationName {
+0%{background-position:51% 0%}
+50%{background-position:50% 100%}
+100%{background-position:51% 0%}
+} /* RAINBOW */
 		}
 
 		.wrapper.style3-alt {
@@ -3761,7 +3784,35 @@ input, select, textarea {
 			}
 
 			#sidebar nav a:before {
-				background: #3c2c62;
+				background: linear-gradient(180deg, #ff00df, #ba00ff, #1c00ff, #00fdff, #00ff0a, #eeff00, #ffa000, #ff0000);
+				background-size: 1600% 1600%;
+
+				-webkit-animation: AnimationName 30s ease infinite;
+				-moz-animation: AnimationName 30s ease infinite;
+				-o-animation: AnimationName 30s ease infinite;
+				animation: AnimationName 30s ease infinite;
+		}
+
+		@-webkit-keyframes AnimationName {
+				0%{background-position:51% 0%}
+				50%{background-position:50% 100%}
+				100%{background-position:51% 0%}
+		}
+		@-moz-keyframes AnimationName {
+				0%{background-position:51% 0%}
+				50%{background-position:50% 100%}
+				100%{background-position:51% 0%}
+		}
+		@-o-keyframes AnimationName {
+				0%{background-position:51% 0%}
+				50%{background-position:50% 100%}
+				100%{background-position:51% 0%}
+		}
+		@keyframes AnimationName {
+				0%{background-position:51% 0%}
+				50%{background-position:50% 100%}
+				100%{background-position:51% 0%}
+		}
 			}
 
 			#sidebar nav a:after {
