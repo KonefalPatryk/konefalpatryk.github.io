@@ -3241,11 +3241,11 @@ input, select, textarea {
 		}
 
 		.wrapper.style1 {
-			background-color: #5e42a6;
+			background-color: #993232;
 		}
 
 		.wrapper.style1-alt {
-			background-color: #493382;
+			background-color: #993232;
 		}
 
 		.wrapper.style2 {
@@ -3256,29 +3256,30 @@ input, select, textarea {
 			background-color: #3e4094;
 		}
 
-		.wrapper.style3 { */ RAINBOW */
-			background: linear-gradient(0deg, #700099, #11009d, #890053);
-background-size: 600% 600%;
+		.wrapper.style3 {
+			background: linear-gradient(180deg, #900000, #db9300, #9b0088);
+	background-size: 600% 600%;
 
--webkit-animation: AnimationName 7s ease infinite;
--moz-animation: AnimationName 7s ease infinite;
-animation: AnimationName 7s ease infinite;
+	-webkit-animation: AnimationName 30s ease infinite;
+	-moz-animation: AnimationName 30s ease infinite;
+	animation: AnimationName 30s ease infinite;
 }
 
 @-webkit-keyframes AnimationName {
-0%{background-position:51% 0%}
-50%{background-position:50% 100%}
-100%{background-position:51% 0%}
+	0%{background-position:50% 0%}
+	50%{background-position:51% 100%}
+	100%{background-position:50% 0%}
 }
 @-moz-keyframes AnimationName {
-0%{background-position:51% 0%}
-50%{background-position:50% 100%}
-100%{background-position:51% 0%}
+	0%{background-position:50% 0%}
+	50%{background-position:51% 100%}
+	100%{background-position:50% 0%}
 }
 @keyframes AnimationName {
-0%{background-position:51% 0%}
-50%{background-position:50% 100%}
-100%{background-position:51% 0%}
+	0%{background-position:50% 0%}
+	50%{background-position:51% 100%}
+	100%{background-position:50% 0%}
+}
 } /* RAINBOW */
 		}
 
@@ -3547,7 +3548,7 @@ animation: AnimationName 7s ease infinite;
 
 	#sidebar {
 		padding: 2.5em 2.5em 0.5em 2.5em ;
-		background: #312450;
+		background: #660000;
 		cursor: default;
 		height: 100vh;
 		left: 0;
