@@ -80,16 +80,45 @@ li a:hover::before{
     display:none;
 }
 section{
-    min-height: 100vh;
-    padding: 8rem 12%;
+    min-height: 80vh;
+    padding: 5rem 12%;
     width: 100%;
     position: relative;
+    background-color: rgb(0, 0, 0);
 }
-.about{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#bg-video {
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Places it behind the content */
 }
+.about {
+    position: relative;
+    text-align: center;
+    min-height: 80vh;
+    color: rgb(255, 255, 255);
+    padding: 0px;
+    z-index: -2;
+}
+
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -3;
+  }
+  
+  .about img {
+    max-width: 100%;
+    height: auto; 
+  }
+
 .about .about-containter{
     display: flex;
     align-items: center;
@@ -107,13 +136,16 @@ section{
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
-
-
+    z-index: -2;
+    padding: 30rem;
+    color: aliceblue;
 }
 .info-box h3{
-    font-size: 3rem;
-    font-weight: 500;
+    font-size: 4rem;
+    font-weight: 10vh;
     opacity: 0.8;
+    padding: 1rem;
+    z-index: -2;
 }
 .info-box span{
     background: linear-gradient(to right,rgb(255,0,255),rgb(0,157,255));
@@ -128,15 +160,15 @@ section{
 .btn{
     border-radius: 3rem;
     padding: 0.5rem 1.5rem;
-    border: 2px solid black;
+    border: 2px solid rgb(255, 255, 255);
     cursor: pointer;
     font-weight: 500;
     text-wrap: nowrap;
     transition: 0.2s ease-in-out;
 }
 .btn:hover{
-    background-color: black;
-    color: white;
+    background-color: rgb(104, 104, 104);
+    color: rgb(255, 255, 255);
 }
 .socials{
     display: flex;
@@ -150,31 +182,28 @@ section{
 .socials i:hover{
     transform: scale(1.1);
 }
-.projects-grid{
-    display:grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-    gap: 2rem;
-}
+
 .project-card{
-    padding: 3rem 2rem;
+    padding: 1.5rem 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     gap: 1.5rem;
-    border:2px solid black;
-    border-radius: 3rem;
+    border:5px solid rgb(255, 255, 255);
+    border-radius: 6rem;
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
 .project-card:hover{
-    background-color: black;
+    background-color: rgb(31, 31, 31);
     color: white;
     transform: translateY(-10px)scale(1.02);
 }
+
 .project-card img{
-    width: 20vw;
+    width: 40vw;
     border-radius: 1rem;
 }
 .project-card:hover .btn{
@@ -184,11 +213,17 @@ section{
 .project-card:hover .btn:hover{
     border: 2px solid white;
     background-color: white;
-    color: black;
+    color: rgb(10, 10, 10);
 }
 .project-card h3{
     font-size: 2rem;
-    font-weight: 500;
+    font-weight: 5vh;
+    color: white;
+}
+.project-card p{
+    font-size: 1rem;
+    font-weight: 5vh;
+    color: white;
 }
 .grid{
     grid-template-columns: repeat(1,1fr);
@@ -241,6 +276,6 @@ section{
         gap:1rem;
     }
     .about-containter{
-        flex-direction: column;
+        flex-direction: row;
     }
 }
