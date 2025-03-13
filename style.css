@@ -58,6 +58,24 @@ header {
     display: flex;
     gap: 2rem;
 }
+.highlighted-text {
+    font-size: 1.2rem;
+    color: #ffffff; /* Adjust color to fit your theme */
+    text-align: center; /* Center align for better visual appeal */
+    line-height: 1.5; /* Improve readability */
+  }
+  b {
+    color: #00d1ff; /* Highlight important terms with a modern blue */
+    line-height: 1.5;
+    text-align: justify; /* Makes paragraphs more readable */
+  }
+  
+  p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: justify; /* Makes paragraphs more readable */
+    color: #ffffff; /* Adjust text color to fit your theme */
+  }  
 li a {
     position: relative;
     color: white;
