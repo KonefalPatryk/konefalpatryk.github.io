@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*{
+/* Global adjustments */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,7 +8,25 @@
     scroll-behavior: smooth;
     list-style: none;
 }
-header{
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Make sure containers don't overflow */
+.some-div {
+    max-width: 100%;
+    width: auto;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+header {
     position: fixed;
     top: 1rem;
     left: 50%;
@@ -24,27 +42,29 @@ header{
     border-radius: 3rem;
     z-index: 100;
 }
-.logo{
+
+.logo {
     color: white;
     font-size: 1.3rem;
     font-weight: 600;
-    text-wrap: nowrap;
-    transition: 0.3 ease-in-out;
-
+    transition: 0.3s ease-in-out;
 }
-.logo:hover{
+
+.logo:hover {
     transform: scale(1.1);
 }
-.nav-links{
-    display:flex;
+
+.nav-links {
+    display: flex;
     gap: 2rem;
 }
-li a{
+li a {
     position: relative;
     color: white;
     font-weight: 300;
 }
-li a::before{
+
+li a::before {
     position: absolute;
     content: '';
     width: 0;
@@ -53,13 +73,15 @@ li a::before{
     top: 25px;
     border-radius: 1rem;
     transition: 0.3s ease-in-out;
-    background: linear-gradient(to right,rgb(0,157,255),rgb(255,0,255));
-
+    background: linear-gradient(to right, rgb(0,157,255), rgb(255,0,255));
 }
-li a:hover::before{
+
+li a:hover::before {
     width: 100%;
 }
-.visit-btn{
+
+/* Button Styles */
+.visit-btn {
     padding: 0.8rem 1.5rem;
     border-radius: 2rem;
     border: none;
@@ -67,25 +89,30 @@ li a:hover::before{
     font-size: 1rem;
     color: white;
     cursor: pointer;
-    text-wrap: nowrap;
     transition: 0.3s ease-in-out;
-    background: linear-gradient(to right,rgb(0,157,255),rgb(255,0,255));
+    background: linear-gradient(to right, rgb(0,157,255), rgb(255,0,255));
 }
-.visit-btn:hover{
-    background: linear-gradient(to right,rgb(255,0,255),rgb(0,157,255));
+
+.visit-btn:hover {
+    background: linear-gradient(to right, rgb(255,0,255), rgb(0,157,255));
     transform: scale(1.03);
 }
-#menu-icon{
+
+/* Menu Icon */
+#menu-icon {
     font-size: 2rem;
-    display:none;
+    display: none;
 }
-section{
+
+/* Adjusting sections for mobile */
+section {
     min-height: 80vh;
     padding: 5rem 12%;
     width: 100%;
     position: relative;
     background-color: rgb(0, 0, 0);
 }
+
 #bg-video {
     position: absolute;
     top: 10vh;
@@ -94,6 +121,7 @@ section{
     height: 100%;
     z-index: -1; /* Places it behind the content */
 }
+
 .about {
     position: relative;
     text-align: center;
@@ -103,35 +131,26 @@ section{
     z-index: -2;
 }
 
-
-.video-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -3;
-  }
-  
-  .about img {
+.about img {
     max-width: 100%;
     height: auto; 
-  }
+}
 
-.about .about-containter{
+.about .about-containter {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10rem;
 }
-.about img{
+
+.about img {
     width: 30vw;
     border-radius: 50%;
-
 }
-.info-box{
-    display:flex;
+
+/* Info Box */
+.info-box {
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -140,50 +159,58 @@ section{
     padding: 30rem;
     color: aliceblue;
 }
-.info-box h3{
+
+.info-box h3 {
     font-size: 4rem;
     font-weight: 10vh;
     opacity: 0.8;
     padding: 1rem;
     z-index: -2;
 }
-.info-box span{
-    background: linear-gradient(to right,rgb(255,0,255),rgb(0,157,255));
+
+.info-box span {
+    background: linear-gradient(to right, rgb(255,0,255), rgb(0,157,255));
     background-clip: text;
     color: transparent;
     font-size: 2rem;
 }
-.btn-group{
+
+.btn-group {
     display: flex;
     gap: 1.5rem;
 }
-.btn{
+
+.btn {
     border-radius: 3rem;
     padding: 0.5rem 1.5rem;
     border: 2px solid rgb(255, 255, 255);
     cursor: pointer;
     font-weight: 500;
-    text-wrap: nowrap;
     transition: 0.2s ease-in-out;
 }
-.btn:hover{
+
+.btn:hover {
     background-color: rgb(104, 104, 104);
     color: rgb(255, 255, 255);
 }
-.socials{
+
+.socials {
     display: flex;
     gap: 2rem;
 }
-.socials i{
+
+.socials i {
     font-size: 2.5rem;
     cursor: pointer;
     transition: 0.2s ease-in-out;
 }
-.socials i:hover{
+
+.socials i:hover {
     transform: scale(1.1);
 }
 
-.project-card{
+/* Project Cards */
+.project-card {
     padding: 1.5rem 2rem;
     display: flex;
     flex-direction: column;
@@ -191,50 +218,45 @@ section{
     justify-content: center;
     text-align: center;
     gap: 1.5rem;
-    border:5px solid rgb(255, 255, 255);
-    border-radius: 6rem;
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 2rem;
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
-.project-card:hover{
+
+.project-card:hover {
     background-color: rgb(31, 31, 31);
     color: white;
-    transform: translateY(-10px)scale(1.02);
+    transform: translateY(-10px) scale(1.02);
 }
 
-.project-card img{
-    width: 40vw;
+.project-card img {
+    width: 20vw;
     border-radius: 1rem;
 }
-.project-card:hover .btn{
-    border: 2px solid white;
-    color: white;
-}
-.project-card:hover .btn:hover{
-    border: 2px solid white;
-    background-color: white;
-    color: rgb(10, 10, 10);
-}
-.project-card h3{
+
+.project-card h3 {
     font-size: 2rem;
-    font-weight: 5vh;
     color: white;
 }
-.project-card p{
+
+.project-card p {
     font-size: 1rem;
-    font-weight: 5vh;
     color: white;
 }
-.grid{
-    grid-template-columns: repeat(1,1fr);
+
+.grid {
+    grid-template-columns: repeat(1, 1fr);
 }
-@media(Max-width:768px){
-    header #menu-icon{
-        display:block;
+
+/* Mobile-Specific Adjustments */
+@media (max-width: 768px) {
+    header #menu-icon {
+        display: block;
     }
-    .nav-links{
-        position:absolute;
-        top:100%;
+    .nav-links {
+        position: absolute;
+        top: 100%;
         margin-top: 1rem;
         width: 100%;
         padding: 1rem;
@@ -245,37 +267,73 @@ section{
         background: black;
         border-radius: 3rem;
         display: none;
-
     }
-    .nav-links li{
+    .nav-links li {
         margin-top: 1.5rem;
         padding: 1rem;
     }
-    .nav-links.active{
-        display:block;
+    .nav-links.active {
+        display: block;
     }
-    header{
-        padding: 1rem 5rem;
-        gap: 8rem;
+    header {
+        padding: 1rem 2rem;
+        gap: 2rem;
     }
-    header .logo{
+    header .logo {
         font-size: 1.5rem;
     }
-    .about-containter img{
+    .about-container img {
         width: 80vw;
     }
-    .input-box input{
+    .input-box input {
         padding: 0.5rem 3rem;
         width: 80%;
         font-size: 1.5rem;
     }
-    .input-box input::placeholder{
+    .input-box input::placeholder {
         font-size: 1.5rem;
     }
-    footer ul{
-        gap:1rem;
+    footer ul {
+        gap: 1rem;
     }
-    .about-containter{
-        flex-direction: row;
+    .about-container {
+        flex-direction: column;
+    }
+    .project-card img {
+        width: 70vw;
+    }
+    .project-card h3 {
+        font-size: 1.5rem;
+    }
+    .page-title {
+        text-align: center;
+        font-size: 2rem;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    /* Video Container with Text */
+    .video-container {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    #bg-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .overlay-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+        font-size: 3rem;
+        z-index: 1;
     }
 }
