@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patryk Konefal - Game Developer</title>
+    
+    <!-- Preconnect for external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://www.youtube.com">
+    
+    <!-- Resources from CDN -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Home section -->
+    <section id="home">
+       <!-- <div id="vanta-bg"></div>-->
+        <div class="video-container" id="video-container">
+            <!-- YouTube iframe will be added by JavaScript -->
+        </div>
+        <div class="content-overlay">
+            <h1 data-text="Patryk Konefal" class="animate__animated animate__backInDown">Patryk Konefal</h1>
+            <h2 data-aos="fade-up" data-aos-delay="400" class="animate__animated animate__fadeIn animate__delay-1s">Game Developer</h2>
+            
+            <div class="skills-icons animate__animated animate__fadeIn animate__delay-2s">
+                <div class="skill-icon" title="Unreal Engine">
+                    <img src="unreal-svg.svg" class="custom-icon" alt="Unreal Engine logo">
+                </div>
+                <div class="skill-icon" title="Unity">
+                    <i class="fab fa-unity"></i>
+                </div>
+                <div class="skill-icon" title="C++">
+                    <i class="fab fa-cuttlefish"></i><span>++</span>
+                </div>
+                <div class="skill-icon" title="C#">
+                    <i class="fab fa-cuttlefish"></i><span>#</span>
+                </div>
+                <div class="skill-icon" title="3D Modeling">
+                    <i class="fas fa-cube"></i>
+                </div>
+                <div class="skill-icon" title="Game Design">
+                    <i class="fas fa-gamepad"></i>
+                </div>
+                <div class="skill-icon" title="VR Development">
+                    <i class="fas fa-vr-cardboard"></i>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator animate__animated animate__bounce animate__infinite" onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})" data-aos="fade-up" data-aos-delay="800">
+                <p>scroll down</p>
+                <div class="arrow-down"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects section -->
+    <section id="projects">
+        <h2 data-aos="fade-down">Procedural Content Generation (PCG) Projects</h2>
+        <h4 data-aos="fade-down">Projects are privated on GitHub to prevent academic plagarism but can be accessed by contacting me.</h4>
+        
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card" data-project-id="Artefact" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-image lazy-load" data-bg="Images/Artefact/Artefact.png"></div>
+                <div class="project-info">
+                    <h3 class="project-title">Nanite Procedural Content Generation Artefact</h3>
+                    <p class="project-description">Investigated Photorealistic Environments and the impact of Procedural Content Generation (PCG) on efficiency and scalability in game development. Designed and developed a technical tool to assist Game Designers and Environmental Artists in rapid prototyping, reducing iteration time while expanding creative possibilities.</p>
+                    <div class="project-tags">
+                        <span class="tag">Unreal Engine 5</span>
+                        <span class="tag">PCG Graph</span>
+                        <span class="tag">Environment</span>
+                        <span class="tag">Nanite</span>
+                    </div>
+                    <div class="view-more">View more</div>
+                </div>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="project-card" data-project-id="tree-tool" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-image lazy-load" data-bg="Images/Lsystem/Lsystem.png"></div>
+                <div class="project-info">
+                    <h3 class="project-title">L-System Tree Generation</h3>
+                    <p class="project-description">Created a custom tree generating tool based on the users inputs.</p>
+                    <div class="project-tags">
+                        <span class="tag">Unreal Engine 5</span>
+                        <span class="tag">PCG</span>
+                        <span class="tag">Custom Tool</span>
+                    </div>
+                    <div class="view-more">View more</div>
+                </div>
+            </div>
+            
+            <!-- Project 3 -->
+            <div class="project-card" data-project-id="mobile-game" data-aos="fade-up" data-aos-delay="300">
+                <div class="project-image lazy-load" data-bg="Images/PopLearner/PopLearner.png"></div>
+                <div class="project-info">
+                    <h3 class="project-title">PCG Mobile Game</h3>
+                    <p class="project-description">Key Features: Integrated ChildLock for safety, an interactive Shop and Inventory, progressive Levels, and a robust Save Game system for seamless data persistence.</p>
+                    <div class="project-tags">
+                        <span class="tag">Unreal Engine 5</span>
+                        <span class="tag">PCG</span>
+                        <span class="tag">Android</span>
+                        <span class="tag">VFX</span>
+                    </div>
+                    <div class="view-more">View more</div>
+                </div>
+            </div>
+        </div>
+        <h2 data-aos="fade-down"><br>Group Projects</br></h2>
+        <div class="projects-grid">
+            <!-- Project 4 -->
+            <div class="project-card" data-project-id="Cleanslate" data-aos="fade-up" data-aos-delay="500">
+                <div class="project-image lazy-load" data-bg="Images/Cleanslate/Cleanslate.png"></div>
+                <div class="project-info">
+                    <h3 class="project-title">Cleanslate</h3>
+                    <p class="project-description">Developed a First-Person Shooter (FPS) game demo in Unreal Engine 5, featuring unique slime-based mechanics. Worked within a multidisciplinary team of 21, including concept artists, 3D artists, designers, programmers, and an animator.</p>
+                    <div class="project-tags">
+                        <span class="tag">Unreal Engine 5</span>
+                        <span class="tag">FPS</span>
+                        <span class="tag">Technical Artist</span>
+                        <span class="tag">Object Pooling</span>
+                    </div>
+                    <div class="view-more">View more</div>
+                </div>
+            </div>
+            <!-- Project 5 -->
+            <div class="project-card" data-project-id="Amaurosis" data-aos="fade-up" data-aos-delay="400">
+                <div class="project-image lazy-load" data-bg="Images/Amaurosis/Amaurosis.png"></div>
+                <div class="project-info">
+                    <h3 class="project-title">Amaurosis</h3>
+                    <p class="project-description">Echolocation horror from a first-person perspective.</p>
+                    <div class="project-tags">
+                        <span class="tag">Unity</span>
+                        <span class="tag">First Person</span>
+                        <span class="tag">Sound Engineer</span>
+                        <span class="tag">Object Pooling</span>
+                    </div>
+                    <div class="view-more">View more</div>
+                </div>
+            </div>
+        </div>
+        <h2 data-aos="fade-down"><br>Extra Projects</br></h2>
+        <div class="projects-grid">
+            <!-- Project 6 -->
+            <div class="project-card" data-project-id="Third-Person" data-aos="fade-up" data-aos-delay="600">
+                <div class="project-image lazy-load" data-bg="Images/Third-Person/Vivifica.png"></div>
+                <div class="project-info">
+                    <h3 class="project-title">Sci-fi Project</h3>
+                    <p class="project-description">Immersive VR experience enabling virtual journeys through different historical eras.</p>
+                    <div class="project-tags">
+                        <span class="tag">Unity</span>
+                        <span class="tag">Third Person</span>
+                        <span class="tag">Animation</span>
+                        <span class="tag">HDRP</span>
+                    </div>
+                    <div class="view-more">View more</div>
+                </div>
+            </div>
+            <!-- Project 7 -->
+            <div class="project-card" data-project-id="tank-game" data-aos="fade-up" data-aos-delay="600">
+                <div class="project-image lazy-load" data-bg="Images/Tank/tank.png"></div>
+                <div class="project-info">
+                    <h3 class="project-title">Scavenger</h3>
+                    <p class="project-description">Tasked with making a top down game within unity.</p>
+                    <div class="project-tags">
+                        <span class="tag">Unity</span>
+                        <span class="tag">Top Down</span>
+                        <span class="tag">Tank</span>
+                        <span class="tag">C#</span>
+                    </div>
+                    <div class="view-more">View more</div>
+                </div>
+            </div>
+            <!-- Project 8 -->
+            <div class="project-card" data-project-id="vr-experience" data-aos="fade-up" data-aos-delay="600">
+                <div class="project-image lazy-load" data-bg="Images/Vr/vr.png"></div>
+                <div class="project-info">
+                    <h3 class="project-title">VR Sci-Fi Crane</h3>
+                    <p class="project-description">Developed a VR prototype where players take the role of a border control agent tasked with protecting humanity by separating humans, enemies, and aliens while preventing aliens from entering the Human gate. </p>
+                    <div class="project-tags">
+                        <span class="tag">Unity</span>
+                        <span class="tag">VR</span>
+                        <span class="tag">Simulation</span>
+                        <span class="tag">Health and Safety</span>
+                    </div>
+                    <div class="view-more">View more</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact section -->
+    <section id="contact">
+        <h2 data-aos="fade-down">Contact Me</h2>
+        <p class="contact-description" data-aos="fade-up" data-aos-delay="200">
+            Interested in collaboration? Have questions about my projects? Contact me through the form below or directly via email.
+        </p>
+    
+        <div class="contact-form" data-aos="fade-up" data-aos-delay="400">
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="9a6b570a-3ea3-43b4-afde-e801cd429af3">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                </div>
+    
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" class="form-control" required></textarea>
+                </div>
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+            </form>
+        </div>
+    
+        <div class="contact-info" data-aos="fade-up" data-aos-delay="600">
+            <div class="contact-item">
+                <i class="fas fa-envelope contact-icon"></i>
+                <span>Patryk.konefal01@gmail.com</span>
+            </div>
+    
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt contact-icon"></i>
+                <span>Northampton, United Kingdom</span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-github fa-2x" style="margin: 0 10px; color: #64B6FF;"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin fa-2x" style="margin: 0 10px; color: #64B6FF;"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter fa-2x" style="margin: 0 10px; color: #64B6FF;"></i></a>
+        </div>
+        <p class="copyright">© 2025 Patryk Konefal. All rights reserved.</p>
+    </footer>
+
+    <!-- Project modals (optimization - one modal for all projects) -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 class="modal-title">Project Title</h3>
+            <p class="modal-subtitle">Project type</p>
+            
+            <div class="modal-tags">
+                <!-- Tags will be added by JavaScript -->
+            </div>
+            
+            <p class="modal-description">Detailed project description will be here.</p>
+
+            <div class="modal-section modal-video-section" style="display: none;">
+                <h4 class="modal-section-title">Video Preview</h4>
+                <div class="modal-video-container">
+                    <!-- YouTube iframe będzie dodany przez JavaScript -->
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <h4 class="modal-section-title">Gallery</h4>
+                <div class="modal-gallery">
+                    <!-- Images will be added by JavaScript -->
+                </div>
+            </div>
+            
+            <div class="modal-section">
+                <h4 class="modal-section-title">Technical Details</h4>
+                <p class="modal-tech-details">Technical details of the project will be here.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Scripts from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
