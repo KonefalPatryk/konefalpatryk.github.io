@@ -109,7 +109,7 @@ const projectsData = {
     },
 };
 
-// Optimized code - initialization after document loading
+// Optimised code - initialization after document loading
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize animated background
     VANTA.NET({
@@ -379,4 +379,47 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             });
         }
     });
+});
+
+// CV Tab Switcher - Add this to your script.js file
+document.addEventListener('DOMContentLoaded', function() {
+    const cvTabs = document.querySelectorAll('.cv-tab');
+    const cvFrame = document.getElementById('cv-frame');
+    const cvTitle = document.getElementById('cv-title');
+    const cvDownload = document.getElementById('cv-download');
+    
+    if (cvTabs.length > 0 && cvFrame && cvTitle && cvDownload) {
+        // CV files - update these paths to your actual PDF files
+        const cvFiles = {
+            'game-dev': 'Patryk_Konefal_Game_Dev_CV.pdf',
+            'general': 'Patryk_Konefal_General_CV.pdf'
+        };
+        
+        // CV titles
+        const cvTitles = {
+            'game-dev': 'Game Developer CV',
+            'general': 'General Professional CV'
+        };
+        
+        // Add click event listeners to tabs
+        cvTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Remove active class from all tabs
+                cvTabs.forEach(t => t.classList.remove('active'));
+                
+                // Add active class to clicked tab
+                this.classList.add('active');
+                
+                // Get the CV type from data attribute
+                const cvType = this.getAttribute('data-cv');
+                
+                // Update iframe source, title, and download link
+                if (cvFiles[cvType]) {
+                    cvFrame.src = cvFiles[cvType];
+                    cvTitle.textContent = cvTitles[cvType];
+                    cvDownload.href = cvFiles[cvType];
+                }
+            });
+        });
+    }
 });
