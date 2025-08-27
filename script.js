@@ -11,7 +11,7 @@ const projectsData = {
             "Images/Artefact/pcgnanite.png",
         ],
         videoId: "sjx6G3aaul8", 
-        techDetails: "The game was created using Unreal Engine 5 with cutting-edge technologies such as Nanite and Lumen, which allow for photorealistic rendering of huge, open spaces. The procedural content generation system uses advanced machine learning algorithms to create coherent and logical worlds. The game runs at 4K resolution at 60 FPS on the latest consoles and PCs."
+        techDetails: "Utilises UE5.2 PCG Plugin, PCG Graph, Spline Tool, Blueprints, "
     },
     "tree-tool": {
         title: "L-System Tree Generation Tool",
