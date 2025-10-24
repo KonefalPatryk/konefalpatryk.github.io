@@ -34,7 +34,7 @@ const projectsData = {
     "mobile-game": {
         title: "PCG Mobile Game",
         type: "Educational App",
-        tags: ["Unreal Engine 5", "Android", "Educational", "PCG", "C++", "Blueprint", "Niagara", "Save Game"],
+        tags: ["Unreal Engine 5.6", "Android", "Educational", "PCG", "C++", "Blueprint", "Niagara", "Save Game"],
         description: "PopLearner: An innovative educational mobile app designed to provide interactive learning experiences. Utilizing Procedural Content Generation (PCG), the app dynamically generates levels and menus, ensuring scalable content production and engaging gameplay. With adaptive level design, players unlock new content through engaging repetition, reinforcing learning outcomes.",
         gallery: [
             "Images/PopLearner/PopLearnerMenu.png",
@@ -42,7 +42,7 @@ const projectsData = {
             "Images/PopLearner/PopLearnerExample2.gif"
             
         ],
-        videoId: "CozQTEEp6Pg", 
+        videoId: "YuaU9PwrPJM", 
         techDetails: "Utilising the PCG Graph and C++ Blueprints to generate interactable assets based on the level selected and assigning number(s)/letter(s) based on the selected level, UI is also automated to generate buttons based on the amount unlocked by the player and progressed is saved."
     },
     "Cleanslate": {
