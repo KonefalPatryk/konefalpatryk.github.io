@@ -1,331 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patryk Konefal - Game Developer</title>
-    
-    <!-- Preconnect for external resources -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://www.youtube.com">
-    
-    <!-- Resources from CDN -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Patryk Konefal — Technical Artist</title>
+  <meta name="description" content="Patryk Konefal: technical artist. Procedural tools, games, 3D art, photogrammetry, motion tracking, motion graphics and esports production in Unreal Engine 5 and Unity.">
+  <meta name="theme-color" content="#0b101c">
+  <meta property="og:title" content="Patryk Konefal — Technical Artist">
+  <meta property="og:description" content="Procedural tools, worlds and games in Unreal Engine 5 and Unity.">
+  <meta property="og:image" content="assets/img/artefact-artefact.webp">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2l14 14-14 14L2 16z' fill='%232f9bff'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Home section -->
-    <section id="home">
-       <!-- <div id="vanta-bg"></div>-->
-        <div class="video-container" id="video-container">
-            <!-- YouTube iframe will be added by JavaScript -->
+  <a class="skip" href="#games">Skip to games</a>
+
+  <!-- ===== Top nav ===== -->
+  <header class="nav" id="nav">
+    <div class="nav-in">
+      <a class="nav-logo" href="#home" aria-label="Patryk Konefal, Technical Artist, home">
+                <span class="nav-brand"><span class="nav-name">Patryk Konefal</span><span class="nav-sub">Technical Artist</span></span>
+      </a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu"><span></span><span></span><span></span></button>
+      <nav id="menu" class="menu" aria-label="Main">
+        <div class="dd">
+          <a href="#games">Games</a>
+          <div class="dd-panel" id="dd-panel"><p class="dd-head">All games</p><ul id="dd-list"></ul></div>
         </div>
-        <div class="content-overlay">
-            <h1 data-text="Patryk Konefal" class="animate__animated animate__backInDown">Patryk Konefal</h1>
-            <h2 data-aos="fade-up" data-aos-delay="400" class="animate__animated animate__fadeIn animate__delay-1s">Game Developer</h2>
-            
-            <div class="skills-icons animate__animated animate__fadeIn animate__delay-2s">
-                <div class="skill-icon" title="Unreal Engine">
-                    <img src="unreal-svg.svg" class="custom-icon" alt="Unreal Engine logo">
-                </div>
-                <div class="skill-icon" title="Unity">
-                    <i class="fab fa-unity"></i>
-                </div>
-                <div class="skill-icon" title="C++">
-                    <i class="fab fa-cuttlefish"></i><span>++</span>
-                </div>
-                <div class="skill-icon" title="C#">
-                    <i class="fab fa-cuttlefish"></i><span>#</span>
-                </div>
-                <div class="skill-icon" title="3D Modeling">
-                    <i class="fas fa-cube"></i>
-                </div>
-                <div class="skill-icon" title="Game Design">
-                    <i class="fas fa-gamepad"></i>
-                </div>
-                <div class="skill-icon" title="VR Development">
-                    <i class="fas fa-vr-cardboard"></i>
-                </div>
-            </div>
-            
-            <div class="scroll-indicator animate__animated animate__bounce animate__infinite" onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})" data-aos="fade-up" data-aos-delay="800">
-                <p>scroll down</p>
-                <div class="arrow-down"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects section -->
-    <section id="projects">
-        <h2 data-aos="fade-down">Procedural Content Generation (PCG) Projects</h2>
-        <h4 data-aos="fade-down">Projects are privated on GitHub to prevent academic plagarism but can be accessed by contacting me.</h4>
-        
-        <div class="projects-grid">
-            <!-- Project 1 -->
-            <div class="project-card" data-project-id="Artefact" data-aos="fade-up" data-aos-delay="100">
-                <div class="project-image lazy-load" data-bg="Images/Artefact/Artefact.png"></div>
-                <div class="project-info">
-                    <h3 class="project-title">Nanite Procedural Content Generation Artefact</h3>
-                    <p class="project-description">Investigated Photorealistic Environments and the impact of Procedural Content Generation (PCG) on efficiency and scalability in game development. Designed and developed a technical tool to assist Game Designers and Environmental Artists in rapid prototyping, reducing iteration time while expanding creative possibilities.</p>
-                    <div class="project-tags">
-                        <span class="tag">Unreal Engine 5</span>
-                        <span class="tag">PCG Graph</span>
-                        <span class="tag">Environment</span>
-                        <span class="tag">Nanite</span>
-                    </div>
-                    <div class="view-more">View more</div>
-                </div>
-            </div>
-            
-            <!-- Project 2 -->
-            <div class="project-card" data-project-id="tree-tool" data-aos="fade-up" data-aos-delay="200">
-                <div class="project-image lazy-load" data-bg="Images/Lsystem/Lsystem.png"></div>
-                <div class="project-info">
-                    <h3 class="project-title">L-System Tree Generation</h3>
-                    <p class="project-description">
-                        Created a custom tree generating tool based on the users inputs. Specialised Tool Development (Unreal Engine 5 C++ & Blueprint): Developed a custom
-                        L-System Tree Generation Tool inspired by 'The Algorithmic Beauty of Plants'. This project
-                        involved deep technical research and demonstrated my ability to translate complex
-                        algorithms and theoretical concepts into a functional design tool prototype.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Unreal Engine 5</span>
-                        <span class="tag">PCG</span>
-                        <span class="tag">Custom Tool</span>
-                    </div>
-                    <div class="view-more">View more</div>
-                </div>
-            </div>
-            
-            <!-- Project 3 -->
-            <div class="project-card" data-project-id="mobile-game" data-aos="fade-up" data-aos-delay="300">
-                <div class="project-image lazy-load" data-bg="Images/PopLearner/PopLearner.png"></div>
-                <div class="project-info">
-                    <h3 class="project-title">PCG Mobile Game UE5.6</h3>
-                    <p class="project-description">
-                        Planned, Developed and optimised a mobile application prototype. The prototype was built
-                        using a combination of C++ and Blueprints and was specifically configured for Android
-                        devices using the required SDK, NDK, JDK with Android Studio, with all technical
-                        specifications and achieving publishing requirements to be Google Play verified and ready
-                        for deployment.
-                        
-                        Key Features: Integrated ChildLock for safety, an interactive Inventory, progressive Levels, and a robust Save Game system for seamless data persistence, Level Generation.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Unreal Engine 5</span>
-                        <span class="tag">PCG</span>
-                        <span class="tag">Android</span>
-                        <span class="tag">VFX</span>
-                    </div>
-                    <div class="view-more">View more</div>
-                </div>
-            </div>
-        </div>
-        <h2 data-aos="fade-down"><br>Group Projects</br></h2>
-        <div class="projects-grid">
-            <!-- Project 4 -->
-            <div class="project-card" data-project-id="Cleanslate" data-aos="fade-up" data-aos-delay="500">
-                <div class="project-image lazy-load" data-bg="Images/Cleanslate/Cleanslate.png"></div>
-                <div class="project-info">
-                    <h3 class="project-title">Cleanslate UE5 / C++</h3>
-                    <p class="project-description">
-                        Developed a First-Person Shooter (FPS) game demo in Unreal Engine 5, featuring unique slime-based mechanics. Collaborated with a multidisciplinary team of 21 (concept artists, 3D artists, designers, programmers, and an animator) to develop an FPS game demo.
-
-
-
-                        Served as Technical Artist, leading discussions on game mechanics, prototyping, testing, and technical investigations to ensure a cohesive development process.
-
-
-
-                        Facilitated team collaboration, refining the final product to align with project goals and enhance the demo’s quality.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Unreal Engine 5</span>
-                        <span class="tag">FPS</span>
-                        <span class="tag">Technical Artist</span>
-                        <span class="tag">Object Pooling</span>
-                    </div>
-                    <div class="view-more">View more</div>
-                </div>
-            </div>
-            <!-- Project 5 -->
-            <div class="project-card" data-project-id="Amaurosis" data-aos="fade-up" data-aos-delay="400">
-                <div class="project-image lazy-load" data-bg="Images/Amaurosis/Amaurosis.png"></div>
-                <div class="project-info">
-                    <h3 class="project-title">Amaurosis Unity / C#</h3>
-                    <p class="project-description">
-                        Echolocation horror from a first-person perspective. Integrated audio into gameplay mechanics, demonstrably enhancing player immersion in the stealth experience.
-
-
-
-                        Served as Sound Engineer, implementing sound effects for game mechanics and enemy AI.
-
-
-
-                        Utilised the event system to trigger sounds and ensured audio was tailored to the gameplay, conducting research and editing audio accordingly.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Unity</span>
-                        <span class="tag">First Person</span>
-                        <span class="tag">Sound Engineer</span>
-                        <span class="tag">Object Pooling</span>
-                    </div>
-                    <div class="view-more">View more</div>
-                </div>
-            </div>
-        </div>
-        <h2 data-aos="fade-down"><br>Extra Projects</br></h2>
-        <div class="projects-grid">
-            <!-- Project 6 -->
-            <div class="project-card" data-project-id="Third-Person" data-aos="fade-up" data-aos-delay="600">
-                <div class="project-image lazy-load" data-bg="Images/Third-Person/Vivifica.png"></div>
-                <div class="project-info">
-                    <h3 class="project-title">Sci-fi Project</h3>
-                    <p class="project-description">Immersive VR experience enabling virtual journeys through different historical eras.</p>
-                    <div class="project-tags">
-                        <span class="tag">Unity</span>
-                        <span class="tag">Third Person</span>
-                        <span class="tag">Animation</span>
-                        <span class="tag">HDRP</span>
-                    </div>
-                    <div class="view-more">View more</div>
-                </div>
-            </div>
-            <!-- Project 7 -->
-            <div class="project-card" data-project-id="tank-game" data-aos="fade-up" data-aos-delay="600">
-                <div class="project-image lazy-load" data-bg="Images/Tank/tank.png"></div>
-                <div class="project-info">
-                    <h3 class="project-title">Scavenger</h3>
-                    <p class="project-description">Tasked with making a top down game within unity.</p>
-                    <div class="project-tags">
-                        <span class="tag">Unity</span>
-                        <span class="tag">Top Down</span>
-                        <span class="tag">Tank</span>
-                        <span class="tag">C#</span>
-                    </div>
-                    <div class="view-more">View more</div>
-                </div>
-            </div>
-            <!-- Project 8 -->
-            <div class="project-card" data-project-id="vr-experience" data-aos="fade-up" data-aos-delay="600">
-                <div class="project-image lazy-load" data-bg="Images/Vr/vr.png"></div>
-                <div class="project-info">
-                    <h3 class="project-title">VR Sci-Fi Crane</h3>
-                    <p class="project-description">Developed a VR prototype where players take the role of a border control agent tasked with protecting humanity by separating humans, enemies, and aliens while preventing aliens from entering the Human gate. </p>
-                    <div class="project-tags">
-                        <span class="tag">Unity</span>
-                        <span class="tag">VR</span>
-                        <span class="tag">Simulation</span>
-                        <span class="tag">Health and Safety</span>
-                    </div>
-                    <div class="view-more">View more</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    
-    <!-- Contact section -->
-    <section id="contact">
-        
-        <h2 data-aos="fade-down">Contact Me</h2>
-        <p class="contact-description" data-aos="fade-up" data-aos-delay="200">
-            Interested in collaboration? Have questions about my projects? Contact me through the form below or directly via email.
-        </p>
-    
-        <div class="contact-form" data-aos="fade-up" data-aos-delay="400">
-            <form action="https://api.web3forms.com/submit" method="POST">
-                <input type="hidden" name="access_key" value="9a6b570a-3ea3-43b4-afde-e801cd429af3">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" class="form-control" required>
-                    </div>
-    
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" class="form-control" required>
-                    </div>
-                </div>
-    
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" class="form-control" required></textarea>
-                </div>
-                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-                <button type="submit" class="submit-btn">
-                    <i class="fas fa-paper-plane"></i> Send Message
-                </button>
-            </form>
-        </div>
-    
-        <div class="contact-info" data-aos="fade-up" data-aos-delay="600">
-            <div class="contact-item">
-                <i class="fas fa-map-marker-alt contact-icon"></i>
-                <span>Northampton, United Kingdom</span>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/konefalpatryk/" target="_blank"><i class="fab fa-linkedin fa-2x" style="margin: 0 10px; color: #64B6FF;"></i></a>
-        </div>
-        <p class="copyright">© 2025 Patryk Konefal. All rights reserved.</p>
-    </footer>
-
-    <!-- Project modals (optimization - one modal for all projects) -->
-    <div id="projectModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h3 class="modal-title">Project Title</h3>
-            <p class="modal-subtitle">Project type</p>
-            
-            <div class="modal-tags">
-                <!-- Tags will be added by JavaScript -->
-            </div>
-            
-            <p class="modal-description">Detailed project description will be here.</p>
-
-            <div class="modal-section modal-video-section" style="display: none;">
-                <h4 class="modal-section-title">Video Preview</h4>
-                <div class="modal-video-container">
-                    <!-- YouTube iframe będzie dodany przez JavaScript -->
-                </div>
-            </div>
-
-            <div class="modal-section">
-                <h4 class="modal-section-title">Gallery</h4>
-                <div class="modal-gallery">
-                    <!-- Images will be added by JavaScript -->
-                </div>
-            </div>
-            
-            <div class="modal-section">
-                <h4 class="modal-section-title">Technical Details</h4>
-                <p class="modal-tech-details">Technical details of the project will be here.</p>
-            </div>
-        </div>
+        <a href="#videos">Videos</a>
+        <a href="#profile">Profile</a>
+        <a href="#contact">Contact</a>
+        <a href="https://www.linkedin.com/in/konefalpatryk/" target="_blank" rel="noopener" class="hexbtn hexbtn-pink menu-cta"><span>LinkedIn</span></a>
+      </nav>
     </div>
-    
-    <!-- Scripts from CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    
-    <!-- Custom JavaScript -->
-    <script src="script.js"></script>
+  </header>
+
+  <main>
+    <h1 class="visually-hidden">Patryk Konefal, Technical Artist: portfolio</h1>
+    <!-- ===== Hero slider ===== -->
+    <section id="home" class="hero" aria-roledescription="carousel" aria-label="Featured games">
+      <div class="hero-slides" id="hero-slides"></div>
+            <div class="hero-ctrl">
+        <div class="hero-tabs" id="hero-tabs" role="group" aria-label="Choose featured game"></div>
+        <div class="hero-arrows">
+          <button type="button" class="ibtn" data-hero="-1" aria-label="Previous featured game">◀</button>
+          <button type="button" class="ibtn" data-hero="1" aria-label="Next featured game">▶</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Game select ===== -->
+    <section id="games" class="sec sec-select" aria-labelledby="games-h">
+      <div class="select-bg" id="select-bg" aria-hidden="true"></div>
+      <div class="wrap select-wrap">
+        <div class="sec-title sec-title-dark" data-wm="GAMES">
+          <p class="kicker">Choose your game</p>
+          <h2 id="games-h">Game Select</h2>
+          <span class="orn" aria-hidden="true"></span>
+        </div>
+
+        <div class="stage" id="stage" aria-live="polite">
+          <div class="stage-copy">
+            <p class="stage-num" id="s-num"></p>
+            <p class="stage-genre" id="s-genre"></p>
+            <h3 class="stage-title" id="s-title"></h3>
+            <p class="stage-pitch" id="s-pitch"></p>
+            <ul class="stage-tags" id="s-tags"></ul>
+            <div class="stage-actions">
+              <a class="hexbtn hexbtn-hue" id="s-info" href="#"><span>Game Info</span></a>
+              <button type="button" class="hexbtn hexbtn-line" id="s-trailer"><span>▶ Trailer</span></button>
+            </div>
+          </div>
+          <a class="stage-art" id="s-art" href="#">
+            <img id="s-img" src="" alt="">
+            <span class="stage-lock" id="s-lock" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10V8a5 5 0 0110 0v2h1.5v11h-13V10zm2 0h6V8a3 3 0 00-6 0z"/></svg><b id="s-lock-label">Private</b></span>
+            <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+          </a>
+        </div>
+
+        <div class="picker" role="group" aria-label="Choose a game" id="picker"></div>
+      </div>
+    </section>
+
+    <!-- ===== Videos ===== -->
+    <section id="videos" class="sec sec-dark" aria-labelledby="videos-h">
+      <div class="wrap">
+        <div class="sec-title sec-title-dark" data-wm="VIDEOS">
+          <p class="kicker">Watch</p>
+          <h2 id="videos-h">Video Previews</h2>
+          <span class="orn" aria-hidden="true"></span>
+        </div>
+        <ul class="vids" id="vids"></ul>
+      </div>
+    </section>
+
+    <!-- ===== Profile ===== -->
+    <section id="profile" class="sec sec-profile" aria-labelledby="profile-h">
+      <div class="wrap">
+        <div class="sec-title sec-title-dark" data-wm="PROFILE">
+          <p class="kicker">The dev</p>
+          <h2 id="profile-h">Character Profile</h2>
+          <span class="orn" aria-hidden="true"></span>
+        </div>
+        <div class="profile">
+                    <div class="profile-body">
+            <p class="profile-name">Patryk Konefal</p>
+            <dl class="stats">
+              <div><dt>Class</dt><dd>Technical Artist</dd></div>
+              <div><dt>Spec</dt><dd>PCG &amp; Tools</dd></div>
+              <div><dt>Server &amp; Channel</dt><dd>Northampton, UK</dd></div>
+              <div><dt>Guild</dt><dd>Open to invites ✦</dd></div>
+            </dl>
+            <p>Hey! I'm a technical artist who sits between art and code. I like building the systems that make the world for you: foliage that places itself, trees that grow from rules, levels that generate on the fly. Alongside the projects here I've worked on esports broadcast graphics, motion graphics and more 3D work than I can fit on one page.</p>
+            <div class="skillsets">
+              <div><p class="skills-h">Engines &amp; Code</p><ul class="skills"><li>Unreal Engine 5</li><li>Unity</li><li>C++</li><li>C#</li><li>Blueprint</li><li>PCG Graph</li><li>Nanite</li><li>VR / OpenXR</li><li>Android</li><li>Porting</li></ul></div>
+              <div><p class="skills-h">3D &amp; Tech Art</p><ul class="skills"><li>Hard Surface Modelling</li><li>3D Modelling</li><li>Texturing</li><li>Rigging</li><li>Weight Painting</li><li>Photogrammetry</li><li>3D Scanning</li></ul></div>
+              <div><p class="skills-h">Software</p><ul class="skills"><li>Blender</li><li>After Effects</li><li>Audition</li><li>Audacity</li><li>HxD</li><li>Flint</li><li>RubyRe</li><li>LTK Manager</li><li>KScan3D</li><li>VXelements / VXscan</li></ul></div>
+              <div><p class="skills-h">Motion, Capture &amp; Broadcast</p><ul class="skills"><li>Motion Tracking</li><li>Kinect v1 &amp; v2</li><li>iPhone Tracking</li><li>Motion Graphics</li><li>Esports Production</li><li>Audio</li></ul></div>
+            </div>
+            <p class="fine">Uni project source code is private (anti-plagiarism). Ask and I'll share it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section id="contact" class="sec sec-contact">
+      <div class="wrap contact">
+        <div class="contact-copy">
+          <div class="sec-title sec-title-dark sec-title-left" data-wm="HELLO">
+            <p class="kicker">Party up</p>
+            <h2>Contact</h2>
+            <span class="orn" aria-hidden="true"></span>
+          </div>
+          <p class="contact-lead">Got a role, a collab, or just want to nerd out about PCG? Send a message and I'll get back to you.</p>
+          <a class="hexbtn hexbtn-line" href="https://www.linkedin.com/in/konefalpatryk/" target="_blank" rel="noopener"><span>LinkedIn ↗</span></a>
+        </div>
+        <form class="form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="9a6b570a-3ea3-43b4-afde-e801cd429af3">
+          <input type="hidden" name="subject" value="New message from your portfolio">
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+          <label>Name<input type="text" name="name" autocomplete="name" required></label>
+          <label>Email<input type="email" name="email" autocomplete="email" required></label>
+          <label class="full">Message<textarea name="message" rows="4" required></textarea></label>
+          <div class="full form-foot">
+            <button type="submit" class="hexbtn hexbtn-pink"><span>Send Message</span></button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="wrap footer-grid">
+      <div class="footer-about">
+        <a class="nav-logo" href="#home" aria-label="Back to top">
+                    <span class="nav-brand"><span class="nav-name">Patryk Konefal</span><span class="nav-sub">Technical Artist</span></span>
+        </a>
+        <p>Technical artist in Northampton, UK: procedural tools, games, 3D art, motion graphics and esports production.</p>
+      </div>
+      <div>
+        <h2 class="footer-h">Games</h2>
+        <ul class="footer-list" id="footer-games"></ul>
+      </div>
+      <div>
+        <h2 class="footer-h">Explore</h2>
+        <ul class="footer-list">
+          <li><a href="#games">Game Select</a></li>
+          <li><a href="#videos">Videos</a></li>
+          <li><a href="#profile">Profile</a></li>
+          <li><button type="button" data-showreel>Showreel</button></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer-h">Contact</h2>
+        <ul class="footer-list">
+          <li><a href="#contact">Send a message</a></li>
+          <li><a href="https://www.linkedin.com/in/konefalpatryk/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li class="muted">Northampton, UK</li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <p>© <span id="year">2026</span> Patryk Konefal. Some games made with very cool teams.</p>
+      <a href="#home">Back to top ▲</a>
+    </div>
+  </footer>
+
+  <!-- ===== Game info ===== -->
+  <dialog id="game" class="gamepage" aria-labelledby="g-title">
+    <div class="gp-hero" id="g-hero">
+      <div class="gp-bar">
+        <button type="button" class="ibtn" data-step="-1" aria-label="Previous game">◀</button>
+        <button type="button" class="ibtn" data-step="1" aria-label="Next game">▶</button>
+        <button type="button" class="ibtn" data-close aria-label="Close">✕</button>
+      </div>
+      <div class="gp-title">
+        <p class="stage-genre" id="g-genre"></p>
+        <h2 id="g-title"></h2>
+        <p id="g-pitch"></p>
+      </div>
+    </div>
+    <div class="gp-body">
+      <div class="gp-main">
+        <div class="video" id="g-video"></div>
+        <h3>About the project</h3>
+        <p id="g-desc"></p>
+        <h3>What I did</h3>
+        <ul class="feats" id="g-feats"></ul>
+        <h3 id="g-shots-h">Screenshots</h3>
+        <div class="shots" id="g-shots"></div>
+      </div>
+      <aside class="gp-side">
+        <div class="req">
+          <h3>System Requirements</h3>
+          <dl id="g-req"></dl>
+        </div>
+        <ul class="stage-tags" id="g-tags"></ul>
+        <div class="gp-links" id="g-links"></div>
+      </aside>
+    </div>
+  </dialog>
+
+  <dialog id="viewer" class="viewer" aria-label="Media viewer">
+    <button type="button" class="ibtn viewer-x" data-close aria-label="Close">✕</button>
+    <div class="viewer-media" id="viewer-media"></div>
+  </dialog>
+
+  <script src="script.js"></script>
 </body>
 </html>
