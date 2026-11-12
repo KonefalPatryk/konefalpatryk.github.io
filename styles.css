@@ -375,3 +375,28 @@ body.locked { overflow: hidden; }
   .pick-row { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 .pick-row .pick { align-content: start; align-self: start; }
+
+/* ---------- Quest log (education & experience) ---------- */
+.stat-sub { font-size: 12px; font-weight: 500 !important; color: var(--muted); margin-top: 2px !important; }
+.quest-h { margin-top: 24px; }
+.quests { list-style: none; padding: 0; margin: 0 0 8px; border-left: 1px solid var(--line); }
+.quests li { position: relative; display: grid; gap: 4px 20px; padding: 0 0 18px 22px; }
+.quests li::before { content: ""; position: absolute; left: -5px; top: 6px; width: 9px; height: 9px; rotate: 45deg; background: var(--accent); }
+@media (min-width: 640px) { .quests li { grid-template-columns: 110px 1fr; } }
+.q-when { font-size: 13px; font-weight: 700; color: var(--accent-2); letter-spacing: .04em; }
+.q-title { font-weight: 700; color: #fff !important; }
+.q-badge { display: inline-block; margin-left: 6px; padding: 1px 8px; font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #fff; background: var(--accent); clip-path: polygon(5px 0, calc(100% - 5px) 0, 100% 50%, calc(100% - 5px) 100%, 5px 100%, 0 50%); vertical-align: 2px; }
+.q-where { font-size: 14px; color: var(--muted) !important; }
+.q-note { font-size: 14px; margin-top: 4px; }
+.contact-mail { margin: -8px 0 22px; }
+.contact-mail a { color: var(--accent-2); font-weight: 600; text-decoration-color: rgb(140 200 255 / .4); text-underline-offset: 4px; }
+.contact-mail a:hover { color: #fff; }
+.profile-body > p + p { margin-top: 12px; }
+.strengths { list-style: none; padding: 0; margin: 0 0 8px; display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr)); }
+.strengths li { background: var(--surface); border: 1px solid var(--line); border-top: 2px solid var(--accent); padding: 12px 14px; display: grid; gap: 4px; }
+.strengths b { font-size: 15px; color: #fff; }
+.strengths span { font-size: 13px; color: var(--muted); line-height: 1.5; }
+.strengths li { align-content: start; }
+.explored { list-style: none; padding: 0; margin: 0 0 6px; display: flex; flex-wrap: wrap; gap: 6px 0; }
+.explored li { font-size: 15px; font-weight: 600; color: #fff; }
+.explored li:not(:last-child)::after { content: "◆"; font-size: 7px; color: var(--accent); margin: 0 12px; vertical-align: 3px; }
